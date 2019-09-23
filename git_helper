@@ -1,0 +1,41 @@
+# more git_helper.txt
+
+1) Create folder for a repository - in (git_dev)
+2) git init           (initialise the git folder/project)
+2.5) or git clone https://github.com/ahsurelook/WHATEVER.git
+3) git remote add origin git:https://github.com/ahsurelook/WHATEVER.git
+4) git add --all       (to add all, or add files to track)
+5) git commit -m "Message to include with these commits"
+6) git push      (will push the changes up for commit) 
+
+
+
+git status      check status
+
+git config --global user.name "Your Name"
+git config --global user.email you@example.com
+# After this - fix identity with git commit --amend --reset-author
+
+
+git clone -b <branch> <remote_repo>       (pull a specific branch)
+
+Clone the repository
+git clone <repository_url>
+
+List all branches
+git branch -a 
+
+Checkout the branch that you want
+git checkout <name_of_branch>
+
+
+
+
+
+To clone a branch without fetching other branches:
+
+mkdir $BRANCH
+cd $BRANCH
+git init
+git remote add -t $BRANCH -f origin $REMOTE_REPO
+git checkout $BRANCH
