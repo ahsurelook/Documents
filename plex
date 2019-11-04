@@ -1,0 +1,9 @@
+
+#Updating Plex
+
+//Retrieve the file from online and store it were plex is installed
+wget https://downloads.plex.tv/plex-media-server/1.2.3.4.5***/plex***.deb
+
+//Install
+sudo dpkg -i plexmediaserver_2.15.2.5154-fd05be322_amd64.deb
+sudo reboot
