@@ -1,0 +1,69 @@
+{
+  "mode": "patterns",
+  "logging": {
+    "size": 100,
+    "active": false
+  },
+  "oxc7r81573551616647": {
+    "type": 1,
+    "color": "#66cc66",
+    "title": "Burp8080",
+    "active": true,
+    "address": "127.0.0.1",
+    "port": 8080,
+    "proxyDNS": false,
+    "username": "",
+    "password": "",
+    "whitePatterns": [
+      {
+        "title": "all",
+        "pattern": "*",
+        "type": 1,
+        "protocols": 1,
+        "active": true
+      }
+    ],
+    "blackPatterns": [
+      {
+        "title": "",
+        "pattern": "*google.com*",
+        "type": 1,
+        "protocols": 1,
+        "active": true
+      },
+      {
+        "title": "",
+        "pattern": "*.mozilla.org*",
+        "type": 1,
+        "protocols": 1,
+        "active": true
+      },
+      {
+        "title": "",
+        "pattern": "*.firefox.com*",
+        "type": 1,
+        "protocols": 1,
+        "active": true
+      },
+      {
+        "title": "",
+        "pattern": "*.googleapis.com*",
+        "type": 1,
+        "protocols": 1,
+        "active": true
+      },
+      {
+        "title": "",
+        "pattern": "*gstatic*",
+        "type": 1,
+        "protocols": 1,
+        "active": true
+      }
+    ],
+    "pacURL": "",
+    "index": 9007199254740990
+  },
+  "browserVersion": "60.8.0",
+  "foxyProxyVersion": "7.4.1",
+  "foxyProxyEdition": "standard"
+}
