@@ -1,4 +1,4 @@
-/* BULK block Inbound + Outbound Firewall Rules for windows */
+# BULK block Inbound + Outbound Firewall Rules for windows
 
 1) Type/Copy below snippet into a text document.
 2) Change the folder location to whatever directy you would like to block all exe's from accessing the net.
