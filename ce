@@ -1,0 +1,15 @@
+Tester document for a process
+
+1) Download file and unzip
+
+2) Run gittyleaks on it - passing it out to 'aha' as an output
+- add the following to the first <pre> tag to disable horizontal scroll bars:
+  style="white-space: pre-wrap; word-break: break-word;"
+    
+3) Use Grep
+# Will search recursivly, ignore case
+- grep -ilr password
+
+# Search for IPs 
+- grep -roE '[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}' 
+
