@@ -10,3 +10,8 @@ Code Exposures
 - 
 
 2) aha
+
+
+
+
+https://geekflare.com/github-credentials-scanner/
