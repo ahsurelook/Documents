@@ -1,6 +1,19 @@
-222
+Keeping python in a controlled environment can be helpful.
+to install this use:
+
+# sudo apt-get install python3-venv
+
+Then to start venv (virtual environment)
+# python3 -m venv directory_in_use
 
 
+(Troubleshoot:
+https://stackoverflow.com/questions/45554864/permission-denied-when-activating-venv
+)
+
+
+then activate the environment by:
+# source bin/activate
 
 1) sdsd
 
