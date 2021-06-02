@@ -1,0 +1,48 @@
+#!/bin/bash
+WLAN1=wlx24050f5a8279
+WLAN0=wlan0
+ETH1=ens33
+ETH0=eth0
+COUNTRY=United_States
+VALUE=0
+sudo ifconfig $WLAN1 up
+if [ "$?" -eq "0" ] ; then
+     echo “$WLAN1 UP Success”;
+     ((VALUE+=1))
+else
+     echo “$WLAN1 UP Failure, exit status: $?”;
+fi
+sudo ifconfig $WLAN0 up
+if [ "$?" -eq "0" ] ; then
+     echo “$WLAN0 UP Success”;
+else
+     echo “$WLAN0 UP Failure, exit status: $?”;
+fi
+sudo ifconfig $ETH1 down
+if [ "$?" -eq "0" ] ; then
+     echo “$ETH1 DOWN Success”;
+     ((VALUE+=1))
+else
+     echo “$ETH1 DOWN Failure, exit status: $?”;
+fi
+sudo ifconfig $ETH0 down
+if [ "$?" -eq "0" ] ; then
+     echo “$ETH0 DOWN Success”;
+else
+     echo “$ETH0 DOWN Failure, exit status: $?”;
+fi
+sudo nordvpn connect $COUNTRY
+CURIP=$(dig +short myip.opendns.com @resolver1.opendns.com)
+CURLOC=$(geoiplookup $CURIP)
+sudo nordvpn status
+echo "-----------------------------";
+echo "-----------------------------";
+echo "----You are: $CURIP----";
+echo "-- In: $CURLOC --";
+echo "-----------------------------";
+echo "-----------------------------";
+
+if [[ VALUE -ge 2 ]] ; then
+     echo "----------------- ALL GOOD JIMMY";
+fi
+
